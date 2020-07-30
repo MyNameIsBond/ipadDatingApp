@@ -7,9 +7,30 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct messagesView: View {
     var body: some View {
-        Text("Hello, world!").padding()
+        Text("messagesView")
+    }
+}
+
+struct settingsView: View {
+    var body: some View {
+        Text("messagesView")
+    }
+}
+
+struct ContentView: View {
+    
+    var Menu = menu
+    
+    var body: some View {
+        NavigationView {
+        List(Menu) { m in
+            NavigationLink(destination: m.destination) {
+                Label(m.name, systemImage: m.icon)
+                }
+            }.listStyle(SidebarListStyle())
+        }
     }
 }
 

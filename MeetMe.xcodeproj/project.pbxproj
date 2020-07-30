@@ -13,6 +13,7 @@
 		EAE4343624D2ED8D000552E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE4343524D2ED8D000552E9 /* Preview Assets.xcassets */; };
 		EAE4344124D2ED8D000552E9 /* MeetMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4344024D2ED8D000552E9 /* MeetMeTests.swift */; };
 		EAE4344C24D2ED8D000552E9 /* MeetMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4344B24D2ED8D000552E9 /* MeetMeUITests.swift */; };
+		EAE4345B24D30893000552E9 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4345A24D30893000552E9 /* MenuModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		EAE4344724D2ED8D000552E9 /* MeetMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE4344B24D2ED8D000552E9 /* MeetMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetMeUITests.swift; sourceTree = "<group>"; };
 		EAE4344D24D2ED8D000552E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAE4345A24D30893000552E9 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		EAE4342D24D2ED8B000552E9 /* MeetMe */ = {
 			isa = PBXGroup;
 			children = (
+				EAE4345924D307F5000552E9 /* Models */,
 				EAE4342E24D2ED8B000552E9 /* MeetMeApp.swift */,
 				EAE4343024D2ED8B000552E9 /* ContentView.swift */,
 				EAE4343224D2ED8D000552E9 /* Assets.xcassets */,
@@ -128,6 +131,14 @@
 				EAE4344D24D2ED8D000552E9 /* Info.plist */,
 			);
 			path = MeetMeUITests;
+			sourceTree = "<group>";
+		};
+		EAE4345924D307F5000552E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EAE4345A24D30893000552E9 /* MenuModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			files = (
 				EAE4343124D2ED8B000552E9 /* ContentView.swift in Sources */,
 				EAE4342F24D2ED8B000552E9 /* MeetMeApp.swift in Sources */,
+				EAE4345B24D30893000552E9 /* MenuModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
