@@ -15,18 +15,32 @@ struct messagesView: View {
 
 struct settingsView: View {
     var body: some View {
-        Text("messagesView")
+        Text("settingsView")
     }
 }
 
+struct defaultView: View {
+    var body: some View {
+        Text("default")
+    }
+}
+
+func destionation (dest: String) -> AnyView {
+    
+    switch dest {
+    case "messagesView": return AnyView(messagesView())
+    case "settingsView": return AnyView(settingsView())
+    default: return AnyView(defaultView())
+    }
+}
+
+
 struct ContentView: View {
-    
     var Menu = menu
-    
     var body: some View {
         NavigationView {
         List(Menu) { m in
-            NavigationLink(destination: m.destination) {
+            NavigationLink(destination: destionation(dest: m.destination)) {
                 Label(m.name, systemImage: m.icon)
                 }
             }.listStyle(SidebarListStyle())

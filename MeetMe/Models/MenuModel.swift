@@ -11,14 +11,13 @@ struct menuModel: Identifiable {
     var id = UUID()
     var name: String
     var icon: String
-    var destination: messagesView
+    var destination: String
 }
 
 var menu = [
-    menuModel(name: "Find a Match", icon: "suit.heart.fill", destination: messagesView()),
-    menuModel(name: "Messages", icon: "message.fill", destination: messagesView()),
-    menuModel(name: "Messages", icon: "message.fill", destination: messagesView()),
-    menuModel(name: "Settings", icon: "gearshape.2.fill", destination: messagesView())
+    menuModel(name: "Find a Match", icon: "suit.heart.fill", destination: "messagesView"),
+    menuModel(name: "Messages", icon: "message.fill", destination: "messagesView"),
+    menuModel(name: "Settings", icon: "gearshape.2.fill", destination: "settingsView")
 ]
 
 
@@ -33,3 +32,9 @@ var user = [
 ]
 
 
+
+struct MenuModel_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
+}
