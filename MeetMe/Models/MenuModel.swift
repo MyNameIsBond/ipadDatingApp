@@ -15,12 +15,10 @@ struct menuModel: Identifiable {
 }
 
 var menu = [
-    menuModel(name: "Find a Match", icon: "suit.heart.fill", destination: "messagesView"),
+    menuModel(name: "Find a Match", icon: "suit.heart.fill", destination: "findAMatchView"),
     menuModel(name: "Messages", icon: "message.fill", destination: "messagesView"),
     menuModel(name: "Settings", icon: "gearshape.2.fill", destination: "settingsView")
 ]
-
-
 
 struct User {
     var name: String
@@ -30,11 +28,3 @@ struct User {
 var user = [
     User(name: "Tony", pic: "pic")
 ]
-
-
-
-struct MenuModel_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-    }
-}
