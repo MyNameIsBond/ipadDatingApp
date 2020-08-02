@@ -13,7 +13,7 @@ struct messagesView: View {
     }
 }
 
-struct settingsView: View {
+struct profileView: View {
     var body: some View {
         Text("settingsView")
     }
@@ -36,7 +36,7 @@ func destionation (dest: String) -> AnyView {
     switch dest {
     case "messagesView": return AnyView(messagesView())
     case "findAMatchView": return AnyView(findAMatchView())
-    case "settingsView": return AnyView(settingsView())
+    case "profileView": return AnyView(profileView())
     default: return AnyView(defaultView())
     }
     
@@ -47,11 +47,11 @@ struct ContentView: View {
     var Menu = menu
     
     var body: some View {
-        #if os(iOS)
-        iPhoneTabView
-        #else
+//        #if os(iOS)
+//        iPhoneTabView
+//        #else
         iPadOSTabView
-        #endif
+//        #endif
     }
     
     var iPhoneTabView: some View {
@@ -71,6 +71,11 @@ struct ContentView: View {
                 Label(m.name, systemImage: m.icon)
             }.tag(m.id)
             }.listStyle(SidebarListStyle())
+        .navigationTitle("Meet Me")
+        .navigationBarItems(trailing: Image("user1")
+                                .frame(width: 25, height: 25)
+                                .clipShape(Circle())
+                                .imageScale(.small))
         }
     }
 }

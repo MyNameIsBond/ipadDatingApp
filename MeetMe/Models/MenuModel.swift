@@ -17,7 +17,7 @@ struct menuModel: Identifiable {
 var menu = [
     menuModel(name: "Find a Match", icon: "suit.heart.fill", destination: "findAMatchView"),
     menuModel(name: "Messages", icon: "message.fill", destination: "messagesView"),
-    menuModel(name: "Settings", icon: "gearshape.2.fill", destination: "settingsView")
+    menuModel(name: "Profile", icon: "person.fill", destination: "profileView")
 ]
 
 struct User {
