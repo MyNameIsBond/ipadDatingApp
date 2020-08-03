@@ -42,7 +42,6 @@ func destionation (dest: String) -> AnyView {
     
 }
 
-
 struct ContentView: View {
     var Menu = menu
     
@@ -74,8 +73,7 @@ struct ContentView: View {
         .navigationTitle("Meet Me")
         .navigationBarItems(trailing: Image("user1")
                                 .frame(width: 25, height: 25)
-                                .clipShape(Circle())
-                                .imageScale(.small))
+                                .clipShape(Circle()))
         }
     }
 }
