@@ -23,13 +23,6 @@ struct defaultView: View {
 }
 
 
-struct findAMatchView: View {
-    var body: some View {
-        Text("find A Match View")
-    }
-}
-
-
 func destionation (dest: String) -> AnyView {
     switch dest {
     case "messagesView": return AnyView(messagesView())

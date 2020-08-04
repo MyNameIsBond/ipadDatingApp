@@ -18,7 +18,20 @@ struct messages: Identifiable {
 
 var messageM = [
     messageModel(name: "Rafaela", icon: "user1", messages:
-                    [messages(time: "13:50", message: "Hello There", sender: "Tony" )]),
+                    [messages(time: "13:51", message: "Hello There", sender: "Tony" ),
+                     messages(time: "13:52", message: "Hello There", sender: "Tony" ),
+                     messages(time: "13:53", message: "Hello There", sender: "Tony" ),
+                     messages(time: "13:54", message: "Hello There", sender: "Tony" ),
+                     messages(time: "13:55", message: "Hello There", sender: "Tony" ),
+                     messages(time: "13:56", message: "Hello There", sender: "Tony" ),
+                     messages(time: "13:57", message: "Hello There", sender: "Tony" ),
+                     messages(time: "13:58", message: "Hello There", sender: "Tony" ),
+                     messages(time: "13:59", message: "Hello There", sender: "Tony" ),
+                     messages(time: "14:01", message: "Hello There", sender: "Tony" ),
+                     messages(time: "14:02", message: "Hello There", sender: "Tony" ),
+                     messages(time: "14:03", message: "Hello There", sender: "Tony" ),
+                     messages(time: "14:04", message: "Hello There", sender: "Tony" ),
+                     messages(time: "14:05", message: "Hello There", sender: "Tony" )]),
     messageModel(name: "Dolores", icon: "user2", messages:
                     [messages(time: "17:50", message: "Hello", sender: "Tony" )]),
     messageModel(name: "Leonara", icon: "user3", messages:
