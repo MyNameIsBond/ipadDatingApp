@@ -13,11 +13,13 @@ struct messagesView: View {
     }
 }
 
+
 struct profileView: View {
     var body: some View {
         Text("settingsView")
     }
 }
+
 
 struct defaultView: View {
     var body: some View {
@@ -25,22 +27,23 @@ struct defaultView: View {
     }
 }
 
+
 struct findAMatchView: View {
     var body: some View {
         Text("find A Match View")
     }
 }
 
+
 func destionation (dest: String) -> AnyView {
-    
     switch dest {
     case "messagesView": return AnyView(messagesView())
     case "findAMatchView": return AnyView(findAMatchView())
     case "profileView": return AnyView(profileView())
     default: return AnyView(defaultView())
     }
-    
 }
+
 
 struct ContentView: View {
     var Menu = menu
@@ -71,13 +74,11 @@ struct ContentView: View {
             }.tag(m.id)
             }.listStyle(SidebarListStyle())
         .navigationTitle("Meet Me")
-        .navigationBarItems(trailing: Image("user1")
-                                .frame(width: 25, height: 25)
-                                .clipShape(Circle()))
+        .navigationBarItems(trailing: Image("user1").imgAvatar(width: 25, height: 25))
         }
     }
+    
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

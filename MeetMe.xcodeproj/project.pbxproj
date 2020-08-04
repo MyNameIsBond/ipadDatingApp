@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA6F684D24D901380032A1FF /* customImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6F684C24D901380032A1FF /* customImageView.swift */; };
 		EAE4342F24D2ED8B000552E9 /* MeetMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4342E24D2ED8B000552E9 /* MeetMeApp.swift */; };
 		EAE4343124D2ED8B000552E9 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4343024D2ED8B000552E9 /* NavigationView.swift */; };
 		EAE4343324D2ED8D000552E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE4343224D2ED8D000552E9 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA6F684C24D901380032A1FF /* customImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customImageView.swift; sourceTree = "<group>"; };
 		EAE4342B24D2ED8B000552E9 /* MeetMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE4342E24D2ED8B000552E9 /* MeetMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetMeApp.swift; sourceTree = "<group>"; };
 		EAE4343024D2ED8B000552E9 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
@@ -74,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA6F684B24D8CFAD0032A1FF /* library */ = {
+			isa = PBXGroup;
+			children = (
+				EA6F684C24D901380032A1FF /* customImageView.swift */,
+			);
+			path = library;
+			sourceTree = "<group>";
+		};
 		EAE4342224D2ED8B000552E9 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +107,7 @@
 		EAE4342D24D2ED8B000552E9 /* MeetMe */ = {
 			isa = PBXGroup;
 			children = (
+				EA6F684B24D8CFAD0032A1FF /* library */,
 				EAE73E1924D463A10027F9F9 /* iOS */,
 				EAE73E1724D462810027F9F9 /* iPadOS */,
 				EAE73E1624D462770027F9F9 /* macOS */,
@@ -295,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE4343124D2ED8B000552E9 /* NavigationView.swift in Sources */,
+				EA6F684D24D901380032A1FF /* customImageView.swift in Sources */,
 				EAE4342F24D2ED8B000552E9 /* MeetMeApp.swift in Sources */,
 				EAE4345B24D30893000552E9 /* MenuModel.swift in Sources */,
 			);
