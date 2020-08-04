@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-struct messagesView: View {
-    var body: some View {
-        Text("messagesView")
-    }
-}
 
 
 struct profileView: View {
@@ -44,6 +39,18 @@ func destionation (dest: String) -> AnyView {
     }
 }
 
+struct SidebariPadOS: View {
+    var Menu = menu
+    var body: some View {
+        List(Menu) { m in
+            NavigationLink(destination: destionation(dest: m.destination)) {
+                Label(m.name, systemImage: m.icon)
+            }.tag(m.id)
+            }.listStyle(SidebarListStyle())
+        .navigationTitle("Meet Me")
+        .navigationBarItems(trailing: Image("user1").imgAvatar(width: 25.0, height: 25.0))
+    }
+}
 
 struct ContentView: View {
     var Menu = menu
@@ -57,6 +64,8 @@ struct ContentView: View {
     }
     
     var iPhoneTabView: some View {
+        
+        
         TabView() {
             ForEach(Menu) { m in
                 destionation (dest: m.destination).tabItem {
@@ -68,17 +77,14 @@ struct ContentView: View {
     
     var iPadOSTabView: some View {
         NavigationView {
-        List(Menu) { m in
-            NavigationLink(destination: destionation(dest: m.destination)) {
-                Label(m.name, systemImage: m.icon)
-            }.tag(m.id)
-            }.listStyle(SidebarListStyle())
-        .navigationTitle("Meet Me")
-        .navigationBarItems(trailing: Image("user1").imgAvatar(width: 25, height: 25))
+            SidebariPadOS()
+            messagesView()
+            defaultView()
         }
     }
-    
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

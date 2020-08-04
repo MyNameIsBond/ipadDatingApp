@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EA6F684D24D901380032A1FF /* customImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6F684C24D901380032A1FF /* customImageView.swift */; };
+		EABC1C4E24D99D8C004B9B33 /* MessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABC1C4D24D99D8C004B9B33 /* MessagesModel.swift */; };
+		EABC1C5224D9BA7A004B9B33 /* messagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABC1C5124D9BA7A004B9B33 /* messagesView.swift */; };
 		EAE4342F24D2ED8B000552E9 /* MeetMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4342E24D2ED8B000552E9 /* MeetMeApp.swift */; };
 		EAE4343124D2ED8B000552E9 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4343024D2ED8B000552E9 /* NavigationView.swift */; };
 		EAE4343324D2ED8D000552E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE4343224D2ED8D000552E9 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		EA6F684C24D901380032A1FF /* customImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customImageView.swift; sourceTree = "<group>"; };
+		EABC1C4D24D99D8C004B9B33 /* MessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesModel.swift; sourceTree = "<group>"; };
+		EABC1C5124D9BA7A004B9B33 /* messagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messagesView.swift; sourceTree = "<group>"; };
 		EAE4342B24D2ED8B000552E9 /* MeetMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE4342E24D2ED8B000552E9 /* MeetMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetMeApp.swift; sourceTree = "<group>"; };
 		EAE4343024D2ED8B000552E9 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE4345A24D30893000552E9 /* MenuModel.swift */,
+				EABC1C4D24D99D8C004B9B33 /* MessagesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 		EAE73E1724D462810027F9F9 /* iPadOS */ = {
 			isa = PBXGroup;
 			children = (
+				EABC1C5124D9BA7A004B9B33 /* messagesView.swift */,
 			);
 			path = iPadOS;
 			sourceTree = "<group>";
@@ -306,6 +312,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE4343124D2ED8B000552E9 /* NavigationView.swift in Sources */,
+				EABC1C4E24D99D8C004B9B33 /* MessagesModel.swift in Sources */,
+				EABC1C5224D9BA7A004B9B33 /* messagesView.swift in Sources */,
 				EA6F684D24D901380032A1FF /* customImageView.swift in Sources */,
 				EAE4342F24D2ED8B000552E9 /* MeetMeApp.swift in Sources */,
 				EAE4345B24D30893000552E9 /* MenuModel.swift in Sources */,

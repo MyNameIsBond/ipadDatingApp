@@ -1,9 +1,4 @@
-//
-//  customImageView.swift
-//  MeetMe
-//
-//  Created by Tony Hajdini on 04/08/2020.
-//
+
 
 import SwiftUI
 
