@@ -41,31 +41,32 @@ struct SidebariPadOS: View {
             }.tag(m.id)
             }.listStyle(SidebarListStyle())
         .navigationTitle("Meet Me")
-        .navigationBarItems(trailing: Image("user1").imgAvatar(width: 25.0, height: 25.0))
+        .navigationBarItems(trailing: Image("user15").imgAvatar(width: 30.0, height: 30.0))
     }
 }
 
 struct ContentView: View {
     var Menu = menu
+    @State private var selection = 0
     
     var body: some View {
 //        #if os(iOS)
-//        iPhoneTabView
+     iPhoneTabView
 //        #else
-        iPadOSTabView
+//        iPadOSTabView
 //        #endif
     }
     
     var iPhoneTabView: some View {
-        
-        
-        TabView() {
-            ForEach(Menu) { m in
-                destionation (dest: m.destination).tabItem {
-                    Label(m.name, systemImage: m.icon)
-                }.tag(m.id)
+        NavigationView {
+            TabView(selection: $selection) {
+                    ForEach(Menu) { m in
+                        destionation(dest: m.destination).tabItem {
+                            Label(m.name, systemImage: m.icon)
+                    }.tag(m.tag)
+                }
             }
-        }
+        }.onAppear()
     }
     
     var iPadOSTabView: some View {
