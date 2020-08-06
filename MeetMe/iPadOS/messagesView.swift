@@ -14,6 +14,7 @@ struct findAMatchView: View {
     var message = [messages]()
     @State private var mess: String = ""
     var body: some View {
+        
             ZStack(alignment: .bottom){
                 List(message) { m in
                     VStack {
@@ -36,38 +37,40 @@ struct messagesView: View {
     
     var messages = messageM
     var body: some View {
-        
+        NavigationView {
         List(messages) { m in
-            
-            NavigationLink(destination: findAMatchView(message: m.messages)) {
-                if m.name == "Rafaela" {
-                    Image(systemName:"circlebadge.fill").foregroundColor(Color.accentColor)
-                } else {
-                    Image(systemName:"circlebadge.fill").opacity(0)
-                }
-                
-            Image(m.icon).imgAvatar(width: 50.0, height: 50.0)
-                
-                VStack(alignment: .leading) {
-                    HStack {
-                    Text(m.name)
-                        .fontWeight(.medium)
-                        Spacer()
-                        Text(m.messages[0].time)
-                            .font(.footnote)
-                            .foregroundColor(Color.gray)
+                NavigationLink(destination: findAMatchView(message: m.messages)) {
+                    if m.name == "Rafaela" {
+                        Image(systemName:"circlebadge.fill").foregroundColor(Color.accentColor)
+                    } else {
+                        Image(systemName:"circlebadge.fill").opacity(0)
                     }
-                    Text(m.messages[0].message)
-                        .font(.subheadline)
-                        .fontWeight(.light)
-                        .foregroundColor(Color.gray)
-                        .lineLimit(1)
+                    
+                Image(m.icon).imgAvatar(width: 50.0, height: 50.0)
+                    
+                    VStack(alignment: .leading) {
+                        HStack {
+                        Text(m.name)
+                            .fontWeight(.medium)
+                            Spacer()
+                            Text(m.messages[0].time)
+                                .font(.footnote)
+                                .foregroundColor(Color.gray)
+                        }
+                        Text(m.messages[0].message)
+                            .font(.subheadline)
+                            .fontWeight(.light)
+                            .foregroundColor(Color.gray)
+                            .lineLimit(1)
+                    }
+                    
                 }
-                
+                .navigationBarItems(trailing: Image("user15")
+                .imgAvatar(width: 30, height: 30))
+                .navigationBarTitle("Messages")
             }
-            .navigationBarItems(trailing: Image("user15")
-            .imgAvatar(width: 30, height: 30))
-            .navigationBarTitle("Travel")
+            
+            
         }
         .listStyle(DefaultListStyle())
 
