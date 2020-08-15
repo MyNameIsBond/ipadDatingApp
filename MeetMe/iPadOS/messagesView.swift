@@ -21,23 +21,36 @@ struct findAMatchView: View {
                         // Message
                         Image("user\(m.id)").imgAvatar(width: 100, height: 100)
                         Text(m.message).background(Color.accentColor)
-                        Text("r")
+                        Text("adasda")
                     }
                 }.listStyle(SidebarListStyle())
-            HStack(spacing: 10) {
-                TextField("Message", text:$mess).textFieldStyle(RoundedBorderTextFieldStyle()).padding(.all)
-                Image(systemName: "face.smiling").foregroundColor(Color.accentColor)
-            }.background(BlurView(style: .regular))
+            HStack {
+                Button(action: {
+                    print("photo")
+                }, label: {
+                    Image(systemName: "photo").foregroundColor(Color.accentColor)
+                })
+
+                TextField("Message",text:$mess)
+                Button(action: {
+                    print("photo")
+                }, label: {
+                    Image(systemName: "face.smiling").foregroundColor(Color.accentColor)
+                })
                 
-        }.ignoresSafeArea(.all)
+            }.padding(.all).background(BlurView(style: .regular))
+                
+        }
     }
 }
+
+
 
 struct messagesView: View {
     
     var messages = messageM
     var body: some View {
-        NavigationView {
+        
         List(messages) { m in
                 NavigationLink(destination: findAMatchView(message: m.messages)) {
                     if m.name == "Rafaela" {
@@ -45,9 +58,7 @@ struct messagesView: View {
                     } else {
                         Image(systemName:"circlebadge.fill").opacity(0)
                     }
-                    
                 Image(m.icon).imgAvatar(width: 50.0, height: 50.0)
-                    
                     VStack(alignment: .leading) {
                         HStack {
                         Text(m.name)
@@ -63,16 +74,13 @@ struct messagesView: View {
                             .foregroundColor(Color.gray)
                             .lineLimit(1)
                     }
-                    
                 }
+                .listStyle(SidebarListStyle())
                 .navigationBarItems(trailing: Image("user15")
                 .imgAvatar(width: 30, height: 30))
-                .navigationBarTitle("Messages")
-            }
-            
-            
+                .navigationBarTitle("Messages")   
         }
-        .listStyle(DefaultListStyle())
+        
 
     }
 }

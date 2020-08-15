@@ -51,14 +51,14 @@ struct ContentView: View {
     
     var body: some View {
 //        #if os(iOS)
-     iPhoneTabView
+        iPhoneTabView
 //        #else
 //        iPadOSTabView
 //        #endif
     }
     
     var iPhoneTabView: some View {
-        
+
             TabView(selection: $selection) {
                     ForEach(Menu) { m in
                         destionation(dest: m.destination).tabItem {
@@ -68,7 +68,6 @@ struct ContentView: View {
             }
         }
     
-    
     var iPadOSTabView: some View {
         NavigationView {
             SidebariPadOS()
@@ -77,8 +76,6 @@ struct ContentView: View {
         }
     }
 }
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
