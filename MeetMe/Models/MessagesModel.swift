@@ -6,6 +6,8 @@ struct messageModel: Identifiable {
     var name: String
     var icon: String
     var messages: [messages]
+    var read: Bool
+    var selected: Bool
 }
 
 struct messages: Identifiable {
@@ -31,31 +33,31 @@ var messageM = [
                      messages(time: "14:02", message: "Hello There", sender: "Tony" ),
                      messages(time: "14:03", message: "Hello There", sender: "Tony" ),
                      messages(time: "14:04", message: "Hello There", sender: "Tony" ),
-                     messages(time: "14:05", message: "Hello There", sender: "Tony" )]),
+                     messages(time: "14:05", message: "Hello There", sender: "Tony" )],read: true, selected: false ),
     messageModel(name: "Dolores", icon: "user2", messages:
-                    [messages(time: "17:50", message: "Hello", sender: "Tony" )]),
+                    [messages(time: "17:50", message: "Hello", sender: "Tony" )],read: false, selected: false),
     messageModel(name: "Leonara", icon: "user3", messages:
-                    [messages(time: "11:50", message: "Hey, you alright.", sender: "Tony" )]),
+                    [messages(time: "11:50", message: "Hey, you alright.", sender: "Tony" )],read: true, selected: false),
     messageModel(name: "Lericia", icon: "user4", messages:
-                    [messages(time: "19:10", message: "what's up bra", sender: "Tony" )]),
+                    [messages(time: "19:10", message: "what's up bra", sender: "Tony" )],read: true, selected: false ),
     messageModel(name: "Eliana", icon: "user5", messages:
-                    [messages(time: "10:10", message: "Hey cutie", sender: "Tony" )]),
+                    [messages(time: "10:10", message: "Hey cutie, how is it going you alright, when was the last time we spoke, I cannot remember", sender: "Tony" )],read: true, selected: false),
     messageModel(name: "Tata", icon: "user6", messages:
-                    [messages(time: "12:10", message: "Hi!", sender: "Tony" )]),
+                    [messages(time: "12:10", message: "Hi!", sender: "Tony" )],read: true, selected: false),
     messageModel(name: "Ryna", icon: "user7", messages:
-                    [messages(time: "12:50", message: "sup girl", sender: "Tony" )]),
+                    [messages(time: "12:50", message: "sup girl", sender: "Tony" )],read: true, selected: false),
     messageModel(name: "Thula", icon: "user8", messages:
-                    [messages(time: "13:50", message: "I am impressed", sender: "Tony" )]),
+                    [messages(time: "13:50", message: "I am impressed", sender: "Tony" )],read: true, selected: false),
     messageModel(name: "Gisele", icon: "user9", messages:
-                    [messages(time: "15:50", message: "you alright?", sender: "Tony" )]),
+                    [messages(time: "15:50", message: "you alright?", sender: "Tony" )],read: true, selected: false),
     messageModel(name: "Patty", icon: "user10", messages:
-                    [messages(time: "16:50", message: "how is it going?", sender: "Tony" )]),
+                    [messages(time: "16:50", message: "how is it going?", sender: "Tony" )],read: true, selected: false),
     messageModel(name: "Jenniffer", icon: "user11", messages:
-                    [messages(time: "11:50", message: "you there?", sender: "Tony" )]),
+                    [messages(time: "11:50", message: "you there?", sender: "Tony" )],read: true, selected: false),
     messageModel(name: "Bruna", icon: "user12", messages:
-                    [messages(time: "2:50", message: "Hello", sender: "Tony" )]),
+                    [messages(time: "2:50", message: "Hello", sender: "Tony" )],read: true, selected: false),
     messageModel(name: "Bruna", icon: "user13", messages:
-                    [messages(time: "2:50", message: "Hello", sender: "Tony" )]),
+                    [messages(time: "2:50", message: "Hello", sender: "Tony" )],read: true, selected: false),
     messageModel(name: "Bruna", icon: "user14", messages:
-                    [messages(time: "2:50", message: "Hello", sender: "Tony" )]),
+                    [messages(time: "2:50", message: "Hello", sender: "Tony" )],read: true, selected: false),
 ]

@@ -23,7 +23,7 @@ struct findAMatchView: View {
                         Text(m.message).background(Color.accentColor)
                         Text("adasda")
                     }
-                }.listStyle(SidebarListStyle())
+                }
             HStack {
                 Button(action: {
                     print("photo")
@@ -39,7 +39,6 @@ struct findAMatchView: View {
                 })
                 
             }.padding(.all).background(BlurView(style: .regular))
-                
         }
     }
 }
@@ -47,40 +46,39 @@ struct findAMatchView: View {
 
 
 struct messagesView: View {
-    
     var messages = messageM
     var body: some View {
-        
-        List(messages) { m in
-                NavigationLink(destination: findAMatchView(message: m.messages)) {
-                    if m.name == "Rafaela" {
-                        Image(systemName:"circlebadge.fill").foregroundColor(Color.accentColor)
-                    } else {
-                        Image(systemName:"circlebadge.fill").opacity(0)
-                    }
-                Image(m.icon).imgAvatar(width: 50.0, height: 50.0)
-                    VStack(alignment: .leading) {
-                        HStack {
-                        Text(m.name)
-                            .fontWeight(.medium)
-                            Spacer()
-                            Text(m.messages[0].time)
-                                .font(.footnote)
-                                .foregroundColor(Color.gray)
+            
+            List(messages) { m in
+                    NavigationLink(destination: findAMatchView(message: m.messages)) {
+                        if m.name == "Rafaela" {
+                            Image(systemName:"circlebadge.fill").foregroundColor(Color.accentColor)
+                        } else {
+                            Image(systemName:"circlebadge.fill").opacity(0)
                         }
-                        Text(m.messages[0].message)
-                            .font(.subheadline)
-                            .fontWeight(.light)
-                            .foregroundColor(Color.gray)
-                            .lineLimit(1)
+                        Image(m.icon).imgAvatar(width: 60, height: 60)
+                        VStack(alignment: .leading) {
+                            HStack {
+                            Text(m.name)
+                                .fontWeight(.medium)
+                                Spacer()
+                                Text(m.messages[0].time)
+                                    .font(.footnote)
+                                    .foregroundColor(Color.gray)
+                            }
+                            Text(m.messages[0].message)
+                                .font(.subheadline)
+                                .fontWeight(.light)
+                                .foregroundColor(Color.gray)
+                                .lineLimit(1)
+                        }
                     }
-                }
-                .listStyle(SidebarListStyle())
-                .navigationBarItems(trailing: Image("user15")
-                .imgAvatar(width: 30, height: 30))
-                .navigationBarTitle("Messages")   
-        }
-        
+                    .navigationBarItems(trailing: Image("user15")
+                    .imgAvatar(width: 30, height: 30))
+                    .navigationBarTitle("Messages")
+                    .background(m.selected ? Color.accentColor : Color.clear)
+                    .listStyle(SidebarListStyle())
+            }
 
     }
 }

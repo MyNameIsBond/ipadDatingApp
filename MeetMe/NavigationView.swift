@@ -22,6 +22,12 @@ struct defaultView: View {
     }
 }
 
+enum Menu {
+    case messagesView
+    case findAMatchView
+    case profileView
+}
+
 
 func destionation (dest: String) -> AnyView {
     switch dest {
@@ -35,13 +41,16 @@ func destionation (dest: String) -> AnyView {
 struct SidebariPadOS: View {
     var Menu = menu
     var body: some View {
-        List(Menu) { m in
-            NavigationLink(destination: destionation(dest: m.destination)) {
-                Label(m.name, systemImage: m.icon)
-            }.tag(m.id)
-            }.listStyle(SidebarListStyle())
-        .navigationTitle("Meet Me")
-        .navigationBarItems(trailing: Image("user15").imgAvatar(width: 30.0, height: 30.0))
+            List(Menu) { m in
+                NavigationLink(destination: destionation(dest: m.destination)) {
+                    Label(m.name, systemImage: m.icon)
+                }.tag(m.id)
+                }
+            .listStyle(SidebarListStyle())
+            .navigationTitle("Meet Me")
+            .navigationBarItems(trailing: Image("user15").imgAvatar(width: 30.0, height: 30.0))
+        
+       
     }
 }
 
@@ -51,21 +60,22 @@ struct ContentView: View {
     
     var body: some View {
 //        #if os(iOS)
-        iPhoneTabView
+//        iPhoneTabView
 //        #else
-//        iPadOSTabView
+        iPadOSTabView
 //        #endif
     }
     
     var iPhoneTabView: some View {
-
+        
             TabView(selection: $selection) {
-                    ForEach(Menu) { m in
+                    List(Menu) { m in
                         destionation(dest: m.destination).tabItem {
                             Label(m.name, systemImage: m.icon)
-                    }.tag(m.tag)
+                    }.tag(selection)
                 }
-            }
+            
+        }
         }
     
     var iPadOSTabView: some View {

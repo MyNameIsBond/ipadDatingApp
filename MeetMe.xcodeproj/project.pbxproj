@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA46481E24E90B51009EB58D /* customText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46481D24E90B51009EB58D /* customText.swift */; };
 		EA6F684D24D901380032A1FF /* customImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6F684C24D901380032A1FF /* customImageView.swift */; };
 		EABC1C4E24D99D8C004B9B33 /* MessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABC1C4D24D99D8C004B9B33 /* MessagesModel.swift */; };
 		EABC1C5224D9BA7A004B9B33 /* messagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABC1C5124D9BA7A004B9B33 /* messagesView.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA46481D24E90B51009EB58D /* customText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customText.swift; sourceTree = "<group>"; };
 		EA6F684C24D901380032A1FF /* customImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customImageView.swift; sourceTree = "<group>"; };
 		EABC1C4D24D99D8C004B9B33 /* MessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesModel.swift; sourceTree = "<group>"; };
 		EABC1C5124D9BA7A004B9B33 /* messagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messagesView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				EA6F684C24D901380032A1FF /* customImageView.swift */,
+				EA46481D24E90B51009EB58D /* customText.swift */,
 			);
 			path = library;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				EABC1C4E24D99D8C004B9B33 /* MessagesModel.swift in Sources */,
 				EABC1C5224D9BA7A004B9B33 /* messagesView.swift in Sources */,
 				EA6F684D24D901380032A1FF /* customImageView.swift in Sources */,
+				EA46481E24E90B51009EB58D /* customText.swift in Sources */,
 				EAE4342F24D2ED8B000552E9 /* MeetMeApp.swift in Sources */,
 				EAE4345B24D30893000552E9 /* MenuModel.swift in Sources */,
 			);
