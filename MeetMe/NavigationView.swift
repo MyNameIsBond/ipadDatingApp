@@ -22,13 +22,6 @@ struct defaultView: View {
     }
 }
 
-enum Menu {
-    case messagesView
-    case findAMatchView
-    case profileView
-}
-
-
 func destionation (dest: String) -> AnyView {
     switch dest {
     case "messagesView": return AnyView(messagesView())
