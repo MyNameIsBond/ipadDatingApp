@@ -50,6 +50,12 @@
 //MARK: General
 
 //set up firebase
-
-
 // make user struct which generates
+
+
+
+//MARK: Next day
+
+// make the login page - register - firebase
+// 
+

@@ -19,6 +19,7 @@
 		EAE4344C24D2ED8D000552E9 /* MeetMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4344B24D2ED8D000552E9 /* MeetMeUITests.swift */; };
 		EAE4345B24D30893000552E9 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4345A24D30893000552E9 /* MenuModel.swift */; };
 		EAFBF62A24EB901C00240E33 /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFBF62924EB901C00240E33 /* ToDoList.swift */; };
+		EAFBF62D24EBFD0700240E33 /* LoginFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFBF62C24EBFD0700240E33 /* LoginFirebase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		EAE4344D24D2ED8D000552E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAE4345A24D30893000552E9 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		EAFBF62924EB901C00240E33 /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
+		EAFBF62C24EBFD0700240E33 /* LoginFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFirebase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		EAE4342D24D2ED8B000552E9 /* MeetMe */ = {
 			isa = PBXGroup;
 			children = (
+				EAFBF62B24EBE50500240E33 /* Authentication */,
 				EAFBF62824EB8FCB00240E33 /* Documentation */,
 				EA6F684B24D8CFAD0032A1FF /* library */,
 				EAE73E1924D463A10027F9F9 /* iOS */,
@@ -194,6 +197,14 @@
 				EAFBF62924EB901C00240E33 /* ToDoList.swift */,
 			);
 			path = Documentation;
+			sourceTree = "<group>";
+		};
+		EAFBF62B24EBE50500240E33 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				EAFBF62C24EBFD0700240E33 /* LoginFirebase.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +340,7 @@
 				EABC1C4E24D99D8C004B9B33 /* MessagesModel.swift in Sources */,
 				EABC1C5224D9BA7A004B9B33 /* messagesView.swift in Sources */,
 				EAFBF62A24EB901C00240E33 /* ToDoList.swift in Sources */,
+				EAFBF62D24EBFD0700240E33 /* LoginFirebase.swift in Sources */,
 				EA6F684D24D901380032A1FF /* customImageView.swift in Sources */,
 				EA46481E24E90B51009EB58D /* customText.swift in Sources */,
 				EAE4342F24D2ED8B000552E9 /* MeetMeApp.swift in Sources */,
