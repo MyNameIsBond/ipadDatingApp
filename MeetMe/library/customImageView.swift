@@ -29,7 +29,7 @@ extension Image {
 
 //MARK: Blur Effect
 struct BlurView: UIViewRepresentable {
-
+    
     let style: UIBlurEffect.Style
 
     func makeUIView(context: UIViewRepresentableContext<BlurView>) -> UIView {
