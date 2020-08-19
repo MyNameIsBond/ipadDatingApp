@@ -13,23 +13,34 @@ struct LoginFirebase: View {
     @State private var password = ""
     @State private var isLoading = false
     @State private var isSuccessful = false
-    var myBlue = Color(red:108.0, green:158.0, blue:255.0)
+    var myBlue = Color(red:108/255, green:158/255, blue:255/255) // doc
+    var myPurple = Color(red: 208/255, green: 45/255, blue: 208/255) // doc
     
     var body: some View {
        
         GeometryReader { g in
             VStack {
-                VStack(spacing: 70) {
+                VStack(spacing: 50) {
                     HStack {
-                        Image(systemName: "person.circle.fill").padding().foregroundColor(.gray)
+                        Image(systemName: "person.circle.fill").padding()
                         TextField("Username", text: $password).padding()
-                    }.cornerRadius(30.0, antialiased: true).shadow(radius: 90)
+                    }.background(Color.white).cornerRadius(10)
                     
-                    Button(action: {}) {
-                        Text("Login").padding()
-                    }.buttonStyle(DefaultButtonStyle()).background(Color.red)
-                }.padding()
-            }.frame(width: g.size.width, height: g.size.height).background(LinearGradient(gradient: Gradient(colors: [.purple, myBlue]), startPoint: .center, endPoint: .topLeading)).ignoresSafeArea(.all)
+                    HStack {
+                        Image(systemName: "lock.fill").padding()
+                        TextField("Username", text: $password).padding()
+                    }.cornerRadius(30.0, antialiased: true).shadow(radius: 90).background(Color.white).cornerRadius(10)
+                    
+                    HStack {
+                        Button(action: {}) {
+                            Spacer()
+                            Text("Login").padding().foregroundColor(Color.white)
+                            Spacer()
+                        }.background(Color.black).cornerRadius(10)
+                        
+                    }
+                }.padding().frame(width: g.size.width )
+            }.frame(width: g.size.width, height: g.size.height).background(LinearGradient(gradient: Gradient(colors: [myPurple, myBlue]), startPoint: .trailing, endPoint: .topLeading))
         }
     }
 }
