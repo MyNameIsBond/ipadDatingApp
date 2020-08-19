@@ -57,5 +57,5 @@
 //MARK: Next day
 
 // make the login page - register - firebase
-// 
+// cleaner code
 

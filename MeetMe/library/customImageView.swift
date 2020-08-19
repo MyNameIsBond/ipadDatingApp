@@ -10,10 +10,11 @@ struct LibraryContent: LibraryContentProvider {
             title: "Avatar Circular Images"
         )
     }
+    
+    func modifiers(base: View) -> [LibraryItem] {
+        LibraryItem(base.gradientColour())
+    }
 }
-
-
-
 
 //MARK: Image Avatar
 extension Image {
@@ -25,6 +26,16 @@ extension Image {
             .clipShape(Circle())
     }
 }
+
+extension View {
+    func gradientColour() -> some View {
+        self
+        .background(LinearGradient(gradient: Gradient(colors: [Color(red: 208/255, green: 45/255, blue: 208/255), Color(red:108/255, green:158/255, blue:255/255)]), startPoint: .trailing, endPoint: .topLeading))
+
+    }
+}
+
+
 
 
 //MARK: Blur Effect

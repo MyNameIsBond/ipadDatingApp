@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA35ED9B24ED759F00297158 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35ED9A24ED759F00297158 /* Constants.swift */; };
 		EA46481E24E90B51009EB58D /* customText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46481D24E90B51009EB58D /* customText.swift */; };
 		EA6F684D24D901380032A1FF /* customImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6F684C24D901380032A1FF /* customImageView.swift */; };
 		EABC1C4E24D99D8C004B9B33 /* MessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABC1C4D24D99D8C004B9B33 /* MessagesModel.swift */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA35ED9924ED231000297158 /* MeetMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MeetMe.entitlements; sourceTree = "<group>"; };
+		EA35ED9A24ED759F00297158 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EA46481D24E90B51009EB58D /* customText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customText.swift; sourceTree = "<group>"; };
 		EA6F684C24D901380032A1FF /* customImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customImageView.swift; sourceTree = "<group>"; };
 		EABC1C4D24D99D8C004B9B33 /* MessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesModel.swift; sourceTree = "<group>"; };
@@ -118,13 +121,14 @@
 		EAE4342D24D2ED8B000552E9 /* MeetMe */ = {
 			isa = PBXGroup;
 			children = (
+				EA35ED9924ED231000297158 /* MeetMe.entitlements */,
 				EAFBF62B24EBE50500240E33 /* Authentication */,
 				EAFBF62824EB8FCB00240E33 /* Documentation */,
 				EA6F684B24D8CFAD0032A1FF /* library */,
 				EAE73E1924D463A10027F9F9 /* iOS */,
 				EAE73E1724D462810027F9F9 /* iPadOS */,
 				EAE73E1624D462770027F9F9 /* macOS */,
-				EAE4345924D307F5000552E9 /* Models */,
+				EAE4345924D307F5000552E9 /* Models - Constants */,
 				EAE4342E24D2ED8B000552E9 /* MeetMeApp.swift */,
 				EAE4343024D2ED8B000552E9 /* NavigationView.swift */,
 				EAE4343224D2ED8D000552E9 /* Assets.xcassets */,
@@ -160,13 +164,14 @@
 			path = MeetMeUITests;
 			sourceTree = "<group>";
 		};
-		EAE4345924D307F5000552E9 /* Models */ = {
+		EAE4345924D307F5000552E9 /* Models - Constants */ = {
 			isa = PBXGroup;
 			children = (
 				EAE4345A24D30893000552E9 /* MenuModel.swift */,
 				EABC1C4D24D99D8C004B9B33 /* MessagesModel.swift */,
+				EA35ED9A24ED759F00297158 /* Constants.swift */,
 			);
-			path = Models;
+			path = "Models - Constants";
 			sourceTree = "<group>";
 		};
 		EAE73E1624D462770027F9F9 /* macOS */ = {
@@ -341,6 +346,7 @@
 				EABC1C5224D9BA7A004B9B33 /* messagesView.swift in Sources */,
 				EAFBF62A24EB901C00240E33 /* ToDoList.swift in Sources */,
 				EAFBF62D24EBFD0700240E33 /* LoginFirebase.swift in Sources */,
+				EA35ED9B24ED759F00297158 /* Constants.swift in Sources */,
 				EA6F684D24D901380032A1FF /* customImageView.swift in Sources */,
 				EA46481E24E90B51009EB58D /* customText.swift in Sources */,
 				EAE4342F24D2ED8B000552E9 /* MeetMeApp.swift in Sources */,
@@ -501,8 +507,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MeetMe/MeetMe.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MeetMe/Preview Content\"";
+				DEVELOPMENT_TEAM = 2FFS5V4S8H;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MeetMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -512,6 +521,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Tony.MeetMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -522,8 +532,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MeetMe/MeetMe.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MeetMe/Preview Content\"";
+				DEVELOPMENT_TEAM = 2FFS5V4S8H;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MeetMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -533,6 +546,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Tony.MeetMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

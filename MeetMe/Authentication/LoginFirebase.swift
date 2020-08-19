@@ -7,8 +7,10 @@
 
 import SwiftUI
 
+
+
 struct LoginFirebase: View {
-    
+    var constant = LoginPage()
     @State private var username = ""
     @State private var password = ""
     @State private var isLoading = false
@@ -20,7 +22,14 @@ struct LoginFirebase: View {
        
         GeometryReader { g in
             VStack {
-                VStack {
+                HStack {
+                    Image("LoginLogo").imgAvatar(width: g.size.width / 2, height: g.size.height / 3)
+                }
+                VStack(spacing: 20) {
+                    VStack {
+                        Text(constant.description)
+                        Text(constant.description2)
+                    }.foregroundColor(Color.white.opacity(0.8))
                     SignInWithAppleButton(
                         .signIn,
                         onRequest: { request in
@@ -29,21 +38,26 @@ struct LoginFirebase: View {
                         onCompletion: { result in
                                 switch result {
                                 case .success(let authResults):
-                                    print("Authorization successful.")
+                                    print("Authorization successful:")
+                                    print(authResults)
                                 case .failure(let error):
                                     print("Authorization failed: " + error.localizedDescription)
                                 }
                             }
-                    ).frame(height: 50).cornerRadius(10)
-                    
+                        ).frame(width: g.size.width / 1.2, height: 60, alignment: .center).cornerRadius(10)
                     HStack {
                         Button(action: {}) {
                             Spacer()
-                            Text("Login with").fontWeight(.semibold).padding().foregroundColor(Color.white)
+                            Image("fblogo").imgAvatar(width: 25, height: 25).foregroundColor(Color.white)
+                            Text("Sign in with facebook").font(.title3).fontWeight(.semibold).multilineTextAlignment(.leading).padding(.vertical).foregroundColor(Color.white)
                             Spacer()
-                        }.background(Color.black).cornerRadius(10).frame(height: 50)
+                        }.background(Color.blue).cornerRadius(10).frame(height: 50)
+                    }.frame(width: g.size.width / 1.2 ,height: 60, alignment: .center)
+                    HStack {
+                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                            Text ("Trouble with signing in?").font(.callout).fontWeight(.semibold).foregroundColor(Color.white)
+                        })
                     }
-                    
                 }.padding().frame(width: g.size.width )
             }.frame(width: g.size.width, height: g.size.height).background(LinearGradient(gradient: Gradient(colors: [myPurple, myBlue]), startPoint: .trailing, endPoint: .topLeading))
         }
