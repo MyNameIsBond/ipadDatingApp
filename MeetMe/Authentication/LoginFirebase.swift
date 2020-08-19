@@ -20,25 +20,30 @@ struct LoginFirebase: View {
        
         GeometryReader { g in
             VStack {
-                VStack(spacing: 50) {
-                    HStack {
-                        Image(systemName: "person.circle.fill").padding()
-                        TextField("Username", text: $password).padding()
-                    }.background(Color.white).cornerRadius(10)
-                    
-                    HStack {
-                        Image(systemName: "lock.fill").padding()
-                        TextField("Username", text: $password).padding()
-                    }.cornerRadius(30.0, antialiased: true).shadow(radius: 90).background(Color.white).cornerRadius(10)
+                VStack {
+                    SignInWithAppleButton(
+                        .signIn,
+                        onRequest: { request in
+                            request.requestedScopes = [.fullName, .email]
+                        },
+                        onCompletion: { result in
+                                switch result {
+                                case .success(let authResults):
+                                    print("Authorization successful.")
+                                case .failure(let error):
+                                    print("Authorization failed: " + error.localizedDescription)
+                                }
+                            }
+                    ).frame(height: 50).cornerRadius(10)
                     
                     HStack {
                         Button(action: {}) {
                             Spacer()
-                            Text("Login").padding().foregroundColor(Color.white)
+                            Text("Login with").fontWeight(.semibold).padding().foregroundColor(Color.white)
                             Spacer()
-                        }.background(Color.black).cornerRadius(10)
-                        
+                        }.background(Color.black).cornerRadius(10).frame(height: 50)
                     }
+                    
                 }.padding().frame(width: g.size.width )
             }.frame(width: g.size.width, height: g.size.height).background(LinearGradient(gradient: Gradient(colors: [myPurple, myBlue]), startPoint: .trailing, endPoint: .topLeading))
         }

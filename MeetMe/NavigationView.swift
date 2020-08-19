@@ -72,11 +72,12 @@ struct ContentView: View {
         }
     
     var iPadOSTabView: some View {
-        NavigationView {
-            SidebariPadOS()
-            messagesView()
-            defaultView()
-        }
+        LoginFirebase()
+//        NavigationView {
+//            SidebariPadOS()
+//            messagesView()
+//            defaultView()
+//        }
     }
 }
 
