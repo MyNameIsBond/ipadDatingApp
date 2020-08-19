@@ -10,8 +10,8 @@ struct LibraryContent: LibraryContentProvider {
             title: "Avatar Circular Images"
         )
     }
-    
-    func modifiers(base: View) -> [LibraryItem] {
+    @LibraryContentBuilder
+    func modifiers(base: ViewModifier) -> [LibraryItem] {
         LibraryItem(base.gradientColour())
     }
 }
@@ -27,10 +27,10 @@ extension Image {
     }
 }
 
-extension View {
+extension ViewModifier {
     func gradientColour() -> some View {
-        self
-        .background(LinearGradient(gradient: Gradient(colors: [Color(red: 208/255, green: 45/255, blue: 208/255), Color(red:108/255, green:158/255, blue:255/255)]), startPoint: .trailing, endPoint: .topLeading))
+        
+            .background(LinearGradient(gradient: Gradient(colors: [Color(red: 208/255, green: 45/255, blue: 208/255), Color(red:108/255, green:158/255, blue:255/255)]), startPoint: .trailing, endPoint: .topLeading))
 
     }
 }
