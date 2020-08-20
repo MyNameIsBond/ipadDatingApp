@@ -15,8 +15,6 @@ struct LoginFirebase: View {
     @State private var password = ""
     @State private var isLoading = false
     @State private var isSuccessful = false
-    var myBlue = Color(red:108/255, green:158/255, blue:255/255) // doc
-    var myPurple = Color(red: 208/255, green: 45/255, blue: 208/255) // doc
     
     var body: some View {
        
@@ -28,7 +26,6 @@ struct LoginFirebase: View {
                 VStack(spacing: 20) {
                     VStack {
                         Text(constant.description)
-                        Text(constant.description2)
                     }.foregroundColor(Color.white.opacity(0.8))
                     SignInWithAppleButton(
                         .signIn,
@@ -49,7 +46,7 @@ struct LoginFirebase: View {
                         Button(action: {}) {
                             Spacer()
                             Image("fblogo").imgAvatar(width: 25, height: 25).foregroundColor(Color.white)
-                            Text("Sign in with facebook").font(.title3).fontWeight(.semibold).multilineTextAlignment(.leading).padding(.vertical).foregroundColor(Color.white)
+                            Text("Sign in with facebook").font(.title2).fontWeight(.semibold).multilineTextAlignment(.leading).padding(.vertical).foregroundColor(Color.white)
                             Spacer()
                         }.background(Color.blue).cornerRadius(10).frame(height: 50)
                     }.frame(width: g.size.width / 1.2 ,height: 60, alignment: .center)
@@ -59,7 +56,8 @@ struct LoginFirebase: View {
                         })
                     }
                 }.padding().frame(width: g.size.width )
-            }.frame(width: g.size.width, height: g.size.height).background(LinearGradient(gradient: Gradient(colors: [myPurple, myBlue]), startPoint: .trailing, endPoint: .topLeading))
+                
+            }.gradientColour(width: g.size.width, height: g.size.height)
         }
     }
 }

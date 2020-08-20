@@ -76,18 +76,12 @@ struct messagesView: View {
                     .navigationBarItems(trailing: Image("user15")
                     .imgAvatar(width: 30, height: 30))
                     .navigationBarTitle("Messages")
-                    .background(m.selected ? Color.accentColor : Color.clear)
                     .listStyle(SidebarListStyle())
             }
 
     }
 }
-//
-//CarouselListStyle
-//DefaultListStyle
-//GroupedListStyle
-//PlainListStyle
-//SidebarListStyle
+
 
 struct messagesView_Previews: PreviewProvider {
     static var previews: some View {

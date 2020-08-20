@@ -10,8 +10,10 @@ import SwiftUI
 // MARK: Login Page
 
 struct LoginPage {
-        var description = "By signing in in this application you agree to our terms."
-        var description2 = "We will never share your data with any third party."
+    var description = """
+                By signing in in this application you agree to our terms.
+                   We will never share your data with any third party.
+                """
 }
 
 
