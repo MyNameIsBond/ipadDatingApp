@@ -7,14 +7,22 @@
 
 import SwiftUI
 
-struct customText: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct LibraryContentt: LibraryContentProvider {
+    @LibraryContentBuilder
+    func titleText(base: Text) -> [LibraryItem] {
+        LibraryItem(
+            base.secondaryText(),
+            title: "secondary text"
+        )
     }
 }
 
-struct customText_Previews: PreviewProvider {
-    static var previews: some View {
-        customText()
+extension Text {
+    func secondaryText() -> some View {
+        self
+            .font(.subheadline)
+            .fontWeight(.light)
+            .foregroundColor(Color.gray)
+            .lineLimit(1)
     }
 }

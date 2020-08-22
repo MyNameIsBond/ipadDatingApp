@@ -67,10 +67,7 @@ struct messagesView: View {
                                     .foregroundColor(Color.gray)
                             }
                             Text(m.messages[0].message)
-                                .font(.subheadline)
-                                .fontWeight(.light)
-                                .foregroundColor(Color.gray)
-                                .lineLimit(1)
+                                .secondaryText()
                         }
                     }
                     .navigationBarItems(trailing: Image("user15")
