@@ -51,29 +51,21 @@ struct messagesView: View {
             
             List(messages) { m in
                     NavigationLink(destination: findAMatchView(message: m.messages)) {
-                        if m.name == "Rafaela" {
-                            Image(systemName:"circlebadge.fill").foregroundColor(Color.accentColor)
-                        } else {
-                            Image(systemName:"circlebadge.fill").opacity(0)
-                        }
+                        Image(systemName:"circlebadge.fill").opacity(m.read ? 0 : 1.0)
                         Image(m.icon).imgAvatar(width: 60, height: 60)
                         VStack(alignment: .leading) {
                             HStack {
-                            Text(m.name)
-                                .fontWeight(.medium)
-                                Spacer()
+                                Text(m.name)
+                                    .fontWeight(.medium)
+                                    Spacer()
                                 Text(m.messages[0].time)
-                                    .font(.footnote)
-                                    .foregroundColor(Color.gray)
+                                    .primaryText()
                             }
                             Text(m.messages[0].message)
                                 .secondaryText()
                         }
                     }
-                    .navigationBarItems(trailing: Image("user15")
-                    .imgAvatar(width: 30, height: 30))
-                    .navigationBarTitle("Messages")
-                    .listStyle(SidebarListStyle())
+                    .listDesign(image: "user15", title: "Messages")
             }
 
     }

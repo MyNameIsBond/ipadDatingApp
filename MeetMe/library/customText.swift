@@ -22,10 +22,20 @@ struct LibraryTextContent: LibraryContentProvider {
             title: "Primary text"
         )
     }
+    
+    @LibraryContentBuilder
+    func listDesign(base: AnyView) -> [LibraryItem] {
+        LibraryItem(
+            base.listDesign(image: "user13", title: "Messages"),
+            title: "Custom List"
+        )
+    }
 }
 
 
-//MARK: 
+
+
+//MARK: Secondary Text
 extension Text {
     func secondaryText() -> some View {
         self
@@ -42,4 +52,16 @@ extension Text {
         .font(.footnote)
         .foregroundColor(Color.gray)
     }
+}
+
+
+extension View {
+    func listDesign(image: String, title: String) -> some View {
+    self
+        .navigationBarItems(trailing: Image(image)
+        .imgAvatar(width: 30, height: 30))
+        .navigationBarTitle(title)
+        .listStyle(SidebarListStyle())
+    }
+   
 }
