@@ -48,26 +48,25 @@ struct findAMatchView: View {
 struct messagesView: View {
     var messages = messageM
     var body: some View {
-            
-            List(messages) { m in
-                    NavigationLink(destination: findAMatchView(message: m.messages)) {
-                        Image(systemName:"circlebadge.fill").opacity(m.read ? 0 : 1.0)
-                        Image(m.icon).imgAvatar(width: 60, height: 60)
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text(m.name)
-                                    .fontWeight(.medium)
-                                    Spacer()
-                                Text(m.messages[0].time)
-                                    .primaryText()
-                            }
-                            Text(m.messages[0].message)
-                                .secondaryText()
+        
+        List(messages) { m in
+                NavigationLink(destination: findAMatchView(message: m.messages)) {
+                    Image(systemName:"circlebadge.fill").opacity(m.read ? 0 : 1.0).foregroundColor(Color.accentColor)
+                    Image(m.icon).imgAvatar(width: 60, height: 60)
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text(m.name)
+                                .fontWeight(.medium)
+                                Spacer()
+                            Text(m.messages[0].time)
+                                .primaryText()
                         }
+                        Text(m.messages[0].message)
+                            .secondaryText()
                     }
-                    .listDesign(image: "user15", title: "Messages")
-            }
-
+                }
+                .listDesign(image: "user15", title: "Messages")
+        }
     }
 }
 
