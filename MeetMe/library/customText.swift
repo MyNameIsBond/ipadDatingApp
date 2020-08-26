@@ -11,7 +11,7 @@ struct LibraryTextContent: LibraryContentProvider {
     @LibraryContentBuilder
     func subtitleText(base: Text) -> [LibraryItem] {
         LibraryItem(
-            base.secondaryText(),
+            base.timeText(),
             title: "secondary text"
         )
     }
@@ -35,9 +35,9 @@ struct LibraryTextContent: LibraryContentProvider {
 
 
 
-//MARK: Secondary Text
+//MARK: Time Text
 extension Text {
-    func secondaryText() -> some View {
+    func timeText() -> some View {
         self
             .font(.subheadline)
             .fontWeight(.light)

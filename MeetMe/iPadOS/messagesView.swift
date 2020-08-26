@@ -37,7 +37,6 @@ struct findAMatchView: View {
                 }, label: {
                     Image(systemName: "face.smiling").foregroundColor(Color.accentColor)
                 })
-                
             }.padding(.all).background(BlurView(style: .regular))
         }
     }
@@ -59,7 +58,7 @@ struct messagesView: View {
                                 .fontWeight(.medium)
                                 Spacer()
                             Text(m.messages[0].time)
-                                .primaryText()
+                                .timeText()
                         }
                         Text(m.messages[0].message)
                             .secondaryText()

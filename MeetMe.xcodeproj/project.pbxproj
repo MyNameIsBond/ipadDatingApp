@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EA35ED9B24ED759F00297158 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35ED9A24ED759F00297158 /* Constants.swift */; };
 		EA46481E24E90B51009EB58D /* customText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA46481D24E90B51009EB58D /* customText.swift */; };
+		EA59782D24F5606F00AD4550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59782C24F5606F00AD4550 /* AppDelegate.swift */; };
 		EA6F684D24D901380032A1FF /* customImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6F684C24D901380032A1FF /* customImageView.swift */; };
 		EABC1C4E24D99D8C004B9B33 /* MessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABC1C4D24D99D8C004B9B33 /* MessagesModel.swift */; };
 		EABC1C5224D9BA7A004B9B33 /* messagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABC1C5124D9BA7A004B9B33 /* messagesView.swift */; };
@@ -44,6 +45,7 @@
 		EA35ED9924ED231000297158 /* MeetMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MeetMe.entitlements; sourceTree = "<group>"; };
 		EA35ED9A24ED759F00297158 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EA46481D24E90B51009EB58D /* customText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customText.swift; sourceTree = "<group>"; };
+		EA59782C24F5606F00AD4550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA6F684C24D901380032A1FF /* customImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customImageView.swift; sourceTree = "<group>"; };
 		EABC1C4D24D99D8C004B9B33 /* MessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesModel.swift; sourceTree = "<group>"; };
 		EABC1C5124D9BA7A004B9B33 /* messagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messagesView.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				EAE4345924D307F5000552E9 /* Models - Constants */,
 				EAE4342E24D2ED8B000552E9 /* MeetMeApp.swift */,
 				EAE4343024D2ED8B000552E9 /* NavigationView.swift */,
+				EA59782C24F5606F00AD4550 /* AppDelegate.swift */,
 				EAE4343224D2ED8D000552E9 /* Assets.xcassets */,
 				EAE4343724D2ED8D000552E9 /* Info.plist */,
 				EAE4343424D2ED8D000552E9 /* Preview Content */,
@@ -341,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA59782D24F5606F00AD4550 /* AppDelegate.swift in Sources */,
 				EAE4343124D2ED8B000552E9 /* NavigationView.swift in Sources */,
 				EABC1C4E24D99D8C004B9B33 /* MessagesModel.swift in Sources */,
 				EABC1C5224D9BA7A004B9B33 /* messagesView.swift in Sources */,

@@ -51,12 +51,11 @@ struct LoginFirebase: View {
                         }.background(Color.blue).cornerRadius(10).frame(height: 50)
                     }.frame(width: g.size.width / 1.2 ,height: 60, alignment: .center)
                     HStack {
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        Button(action: {}, label: {
                             Text ("Trouble with signing in?").font(.callout).fontWeight(.semibold).foregroundColor(Color.white)
                         })
                     }
-                }.padding().frame(width: g.size.width )
-                
+                }.padding().frame(width: g.size.width)
             }.gradientColour(width: g.size.width, height: g.size.height)
         }
     }
