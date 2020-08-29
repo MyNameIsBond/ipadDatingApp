@@ -37,7 +37,7 @@ struct LibraryTextContent: LibraryContentProvider {
 
 //MARK: Time Text
 extension Text {
-    func timeText() -> some View {
+    func primaryText() -> some View {
         self
             .font(.subheadline)
             .fontWeight(.light)
@@ -47,7 +47,7 @@ extension Text {
 }
 
 extension Text {
-    func primaryText() -> some View {
+    func timeText() -> some View {
         self
         .font(.footnote)
         .foregroundColor(Color.gray)
