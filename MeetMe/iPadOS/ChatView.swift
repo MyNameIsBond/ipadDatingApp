@@ -26,7 +26,7 @@ struct ChatView: View {
                 }, label: {
                     Image(systemName: "photo").foregroundColor(Color.accentColor)
                 })
-                TextField("Message",text:$mess)
+                TextField("Message",text:$mess).background(BlurView(style: .regular)).padding(5).cornerRadius(9.0)
                 Button(action: {
                     print("photo")
                 }, label: {
