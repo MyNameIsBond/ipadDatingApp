@@ -11,28 +11,32 @@ struct ChatView: View {
     var message = [messages]()
     @State private var mess: String = ""
     var body: some View {
-            ZStack(alignment: .bottom){
-                List(message) { m in
-                    VStack {
-                        // Message
-                        Image("user\(m.id)").imgAvatar(width: 100, height: 100)
-                        Text(m.message).background(Color.accentColor)
-                        Text("adasda")
+            VStack {
+                ZStack(alignment: .bottom) {
+                    GeometryReader { g in
+                        ScrollView {
+                            ForEach(message) { m in
+                                VStack {
+                                    // Message
+                                    Text(m.message).background(Color.accentColor)
+                                }
+                            }.frame(width: g.size.width)
+                        }
                     }
-                }
-            HStack {
-                Button(action: {
-                    print("photo")
-                }, label: {
-                    Image(systemName: "photo").foregroundColor(Color.accentColor)
-                })
-                TextField("Message",text:$mess).padding(5).overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 1)).background(BlurView(style: .regular)).cornerRadius(20)
-                Button(action: {
-                    print("photo")
-                }, label: {
-                    Image(systemName: "face.smiling").foregroundColor(Color.accentColor)
-                })
-            }.padding(.all).background(BlurView(style: .regular))
+                HStack {
+                    Button(action: {
+                        print("photo")
+                    }, label: {
+                        Image(systemName: "plus").foregroundColor(Color.accentColor)
+                    })
+                    TextField("Message",text:$mess).padding(5).overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 2)).background(BlurView(style: .light)).cornerRadius(20)
+                    Button(action: {
+                        // To Photo Gallery
+                    }, label: {
+                        Image(systemName: "face.smiling").foregroundColor(Color.accentColor)
+                    })
+                }.padding(.all).background(BlurView(style: .regular))
+            }
         }
     }
 }
